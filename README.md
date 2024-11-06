@@ -21,5 +21,5 @@ Projeto consiste em gerar um relatório de venda que possue um subrelatorio com 
 
 ### Home parte 1
 <p float="left">
-  <img src="static/image.png" width="900" />
+  <img src="statics/image.png" width="900" />
 </p>
