@@ -19,7 +19,7 @@ Projeto consiste em gerar um relatório de venda que possue um sub-relatório co
 
 # Modelo do Relatório 
 
-### Home parte 1
+### Relatório
 <p float="left">
   <img src="statics/image.png" width="900" />
 </p>
