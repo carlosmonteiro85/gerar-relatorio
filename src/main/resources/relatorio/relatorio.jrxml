@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EstudoProposta" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="10" bottomMargin="5" uuid="c2a4425e-1a01-461e-afd7-422d456c009f">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="33"/>
+	<property name="ireport.y" value="502"/>
+	<parameter name="PRODUTOS" class="net.sf.jasperreports.engine.JasperReport"/>
+	<field name="nomeVendedor" class="java.lang.String"/>
+	<field name="dataVenda" class="java.lang.String"/>
+	<field name="valorVenda" class="java.lang.String"/>
+	<field name="imposto" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<field name="produtos" class="java.util.Collection"/>
+	<group name="DadosCabecalho">
+		<groupHeader>
+			<band height="92">
+				<rectangle>
+					<reportElement x="0" y="1" width="555" height="22" forecolor="#FFFFFF" backcolor="#BF1B20" uuid="b3f90eb7-de06-41a8-8126-1fc577bc12e6"/>
+				</rectangle>
+				<rectangle>
+					<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="1" width="554" height="90" uuid="db465f8f-79ec-436d-8d16-465ca04f4e7e"/>
+				</rectangle>
+				<staticText>
+					<reportElement positionType="Float" x="355" y="76" width="47" height="14" uuid="e863a2f6-bca6-4fff-b510-418366dc6633"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="9" isBold="true" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[Total Vendas]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="2" y="23" width="68" height="18" uuid="0dd6d288-4cc1-4fcd-983c-87548b024d8c"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="9" isBold="true" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[Vendedor]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="355" y="44" width="78" height="15" uuid="1aa45ff1-ee98-474b-9e6a-fa3113dad582"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="9" isBold="true" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[Valor venda]]></text>
+				</staticText>
+				<line direction="BottomUp">
+					<reportElement x="0" y="42" width="554" height="1" uuid="a81942db-58c7-4809-afc2-a9be20436d23"/>
+					<graphicElement>
+						<pen lineStyle="Solid" lineColor="#000000"/>
+					</graphicElement>
+				</line>
+				<line direction="BottomUp">
+					<reportElement x="354" y="74" width="200" height="1" uuid="ec48d0bd-7a49-47fc-b224-e9b0cdfef028"/>
+					<graphicElement>
+						<pen lineStyle="Solid" lineColor="#000000"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement positionType="Float" x="348" y="23" width="46" height="18" uuid="5b4ceeb3-73d2-48b3-84be-43022d9e7651"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="true" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[Data ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="355" y="59" width="76" height="14" uuid="79c62849-00f7-432d-8fa3-d4ff8bbfaa7e"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="9" isBold="true" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[Valor Imposto]]></text>
+				</staticText>
+				<textField textAdjust="StretchHeight">
+					<reportElement positionType="Float" x="70" y="23" width="278" height="19" uuid="e4377d03-b430-4f9b-9a46-93dcde05c4eb"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="9" isBold="false" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nomeVendedor}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement positionType="Float" x="396" y="23" width="157" height="18" uuid="0cd9a6f3-d591-4ce4-9ce5-af6b1a1c4f91"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="false" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dataVenda}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement positionType="Float" x="439" y="77" width="113" height="14" uuid="a8fb210b-9e16-428e-aa25-a557e6e3b796"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="false" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="101" y="3" width="339" height="18" forecolor="#FFFFFF" uuid="e6f4a4ad-cccf-4076-8928-ac18aa319e38"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="11" isBold="true" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[VENDAS]]></text>
+				</staticText>
+				<textField textAdjust="StretchHeight">
+					<reportElement positionType="Float" x="439" y="44" width="113" height="14" uuid="c9384789-afdf-4905-aee8-a5d8b10f64ce"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="false" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{valorVenda}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement positionType="Float" x="439" y="58" width="113" height="14" uuid="95af05ff-8ede-4a41-936b-e6c202c6dcb9"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="false" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{imposto}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="Produtos">
+		<groupHeader>
+			<band height="32" splitType="Stretch">
+				<rectangle>
+					<reportElement x="0" y="1" width="553" height="17" backcolor="#BF1B20" uuid="cf223843-44ce-4ff3-9276-bea339493e39"/>
+					<graphicElement>
+						<pen lineColor="#BF1B20"/>
+					</graphicElement>
+				</rectangle>
+				<rectangle>
+					<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="0" width="554" height="18" uuid="0186866f-84f8-4b19-aac8-1816c832c12f"/>
+				</rectangle>
+				<staticText>
+					<reportElement positionType="Float" x="27" y="1" width="512" height="14" forecolor="#FFFFFF" uuid="69d0d6cd-f744-4c4b-9c29-f0133aab39bc"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="11" isBold="true" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[PRODUTOS]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="18" width="554" height="14" uuid="05fd67a1-0c02-4215-9c3e-6af4a7b7cfc5"/>
+				</rectangle>
+				<line>
+					<reportElement stretchType="RelativeToBandHeight" x="355" y="18" width="1" height="14" uuid="0f8c0a3f-b9e6-4642-8b03-7a7fe7545398">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToBandHeight" x="458" y="18" width="1" height="14" uuid="7f2fa02c-b5dc-4e46-8fd8-575a5daae979">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToBandHeight" x="53" y="18" width="1" height="14" uuid="cf2e1430-1c57-46d6-bec2-a3b2954452c8">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToBandHeight" x="292" y="18" width="1" height="14" uuid="81f2bd7d-f23a-44d0-af0a-15d97bbbe30a">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+				</line>
+				<staticText>
+					<reportElement positionType="Float" x="0" y="18" width="53" height="14" uuid="555ab42e-73fd-43ea-be0a-cefb85e9ab29"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="true" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[COD]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="54" y="18" width="237" height="14" uuid="8f3064da-c7b1-4a3a-9ab9-0cd2bfeac3a6"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="true" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[DESCRIÇÃO PRODUTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="293" y="18" width="62" height="14" uuid="6297567e-3be3-44a9-8b51-59928f4e687a"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="true" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[QUANT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="356" y="18" width="102" height="14" uuid="b99f7e3b-bcc5-495d-bfe8-19b4200a92c5"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="true" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[VALOR UNI]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="460" y="18" width="93" height="14" uuid="7a9baa1b-f024-4761-badb-b59e0d65d021"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9" isBold="true" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[VALOR TOTAL]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="DadosProdutos">
+		<groupHeader>
+			<band height="4" splitType="Stretch">
+				<subreport>
+					<reportElement x="0" y="0" width="50" height="4" uuid="8d57b26b-2276-429d-ab46-ae2ba235b6a5"/>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{produtos})]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{PRODUTOS}]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+	</group>
+	<pageHeader>
+		<band height="81" splitType="Prevent">
+			<staticText>
+				<reportElement positionType="Float" x="140" y="20" width="272" height="38" uuid="60ec0080-6eb6-43e6-ae7f-91fb348437eb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE VENDAS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="60">
+			<staticText>
+				<reportElement x="157" y="4" width="210" height="30" uuid="aab09822-57ab-494f-9a51-2d4694596f28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[Rodape do relatorio]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
