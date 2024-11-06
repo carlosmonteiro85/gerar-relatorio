@@ -1,5 +1,5 @@
 # Gerador de Relatório 
-Projeto consiste em gerar um relatório de venda que possue um subrelatorio com produtos, gerando um arquivo em PDF 
+Projeto consiste em gerar um relatório de venda que possue um sub-relatório com produtos, gerando um arquivo em PDF 
 
 
  # Tecnologias e ferramentas usadas
